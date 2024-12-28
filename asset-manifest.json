@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dads-website/static/css/main.de1fb72f.css",
-    "main.js": "/dads-website/static/js/main.247fceef.js",
+    "main.js": "/dads-website/static/js/main.36570547.js",
     "static/js/488.af104311.chunk.js": "/dads-website/static/js/488.af104311.chunk.js",
     "static/media/a1.jpg": "/dads-website/static/media/a1.044659617f6bb99a52e2.jpg",
     "static/media/f3.jpg": "/dads-website/static/media/f3.d7fc7dbcf1fd97976df6.jpg",
@@ -38,11 +38,11 @@
     "static/media/b3.jpg": "/dads-website/static/media/b3.5d171bd1754d0be9d85b.jpg",
     "index.html": "/dads-website/index.html",
     "main.de1fb72f.css.map": "/dads-website/static/css/main.de1fb72f.css.map",
-    "main.247fceef.js.map": "/dads-website/static/js/main.247fceef.js.map",
+    "main.36570547.js.map": "/dads-website/static/js/main.36570547.js.map",
     "488.af104311.chunk.js.map": "/dads-website/static/js/488.af104311.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de1fb72f.css",
-    "static/js/main.247fceef.js"
+    "static/js/main.36570547.js"
   ]
 }
