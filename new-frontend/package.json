@@ -2,10 +2,11 @@
   "name": "my-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AndyGreenhaw.github.io/dads-website-frontend",
+  "homepage": "https://AndyGreenhaw.github.io/greenhawglass",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
+    "emailjs-com": "^3.2.0",
     "gsap": "^3.12.5",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",

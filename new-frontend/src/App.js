@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useEffect, useState} from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'; 
+import { HashRouter } from 'react-router-dom'; 
 import AppRoutes from './routes/PageRoutes.js';
 
 function App() {
@@ -17,9 +17,9 @@ function App() {
   
   // console.log(users)
   return (
-    <Router>
+    <HashRouter>
       <AppRoutes />
-    </Router>
+    </HashRouter>
   );
 }
 
