@@ -66,23 +66,108 @@ body::before {
 }
 
 /* Contact Area */
-.contact-row{
+.contact-row {
     text-align: center;
+    margin-bottom: 70px;
 }
 
 .contact-button {
-    background-color: aliceblue;
-    width: 250px;
-    height: 100px;
-    font-size: 36px;
-    border: solid 2px;
-    margin-bottom: 50px;
-    box-shadow: 2px,2px,2px,2px;
+    background: linear-gradient(to right, #00213d, #1500d1); /* Blue gradient */
+    color: white;
+    font-size: 28px; /* Bigger text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Evenly rounded edges */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+    background: linear-gradient(to right, #1500d1, #00213d); /* Reverse gradient on hover */
 }
 
 .call-to-action {
     color: white;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.contact-form-header {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form-instructions {
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.input-name, .input-email, .input-message {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-message {
+    height: 150px;
+}
+
+.submit-button-container {
+    text-align: center;
+}
+
+.submit-button {
+    background: linear-gradient(to right, #00213d, #1500d1); /* Blue gradient */
+    color: white;
+    font-size: 18px; /* Bigger text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Evenly rounded edges */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #1500d1, #00213d); /* Reverse gradient on hover */
+}
+
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
 /* Gallery Display */
 .image-row {
@@ -101,7 +186,12 @@ body::before {
 }
 
 /* Styles for screens smaller than 768px (md) */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
+    .profile-row {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .profile-image-text {
         text-align: center;
         width:auto;
@@ -131,7 +221,8 @@ body::before {
 }
 
 /* Styles for very small screens (phones) */
-@media (max-width: 576px) {
+@media (max-width: 912px) {
+    
     .profile-image-text {
         text-align: center;
         width:auto;
@@ -145,7 +236,8 @@ body::before {
         text-align: center;
         color:white;
         font-size: 18px;
-        padding-left: 100px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .gallery-image {
         width: 100%; /* Full width */
@@ -161,8 +253,53 @@ body::before {
     
 }
 
+@media (max-width: 600px) {
+    .home-header {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .profile-image-text {
+        text-align: center;
+        width:auto;
+        height: 100%; /* Maintains the aspect ratio */
+        max-width: 300px; /* Adjust this value as needed */
+        object-fit: contain; /* Ensures the image fits within the space without cropping */
+        cursor: pointer;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .profile-image-text {
+        text-align: center;
+        width:auto;
+        height: 100%; /* Maintains the aspect ratio */
+        max-width: 200px; /* Adjust this value as needed */
+        object-fit: contain; /* Ensures the image fits within the space without cropping */
+        cursor: pointer;
+        margin-bottom: 100px;
+    }
+}
+
 
 .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.contact-modal {
     position: fixed;
     top: 0;
     left: 0;

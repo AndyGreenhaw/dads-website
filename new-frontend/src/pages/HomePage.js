@@ -3,9 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/css.css'; // Ensure your CSS file is here
 import images from '../utils/importImages';
 import profileImage from '../media/dennis-profile.jpg'
+import ContactForm from './ContactForm';
 
 const HomePage = () => {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [openContact, setOpenContact] = useState(false);
+
     const imageKeys = Object.keys(images).sort(); // Sort images alphabetically if necessary
     const allImages = imageKeys.map(key => images[key]);
 
@@ -15,6 +18,7 @@ const HomePage = () => {
 
     const closeModal = () => {
         setSelectedImage(null);
+        setOpenContact(false)
     };
 
     const renderRows = () => { 
@@ -38,22 +42,26 @@ const HomePage = () => {
         return rows; 
     };
 
+    const handleContact = () => {
+        setOpenContact(!openContact)
+    }
+    
     return (
         <>
             <div className="container-fluid dark-center-background">
                 <div className="dark-center-background">
                 <div className="row">
-                    <div className="col home-header-container">
+                    <div className="col">
                         <h1 className='home-header'>
-                            Greenhaw Stained Glass
+                            Greenhaw Glass
                         </h1>
                     </div>
                 </div>
                 <div className="row profile-row">
-                    <div className="col-md-4">
+                    <div className="col-xl-4">
                         <img className="profile-image-text" src={profileImage}></img>
                     </div>
-                    <div className='col-md-8'>
+                    <div className='col-xl-8'>
                         <p className='profile-bio-text'>
                              Dennis Greenhaw grew up in Canton, Kansas, and graduated from Kansas Wesleyan University (Salina) and the University of Wisconsin Graduate School of Banking (Madison). learned stained glass art in the early 1980s from a stained glass hobbyist in 
                              Southeast Kansas. His early creations were small suncatchers which he gave as gifts 
@@ -73,7 +81,9 @@ const HomePage = () => {
                 <div className='row'>
                     <div className='col-12'>
                         <div className='contact-row'>
-                            <button className='contact-button'>Contact Me</button>
+                            <button className='contact-button' onClick={handleContact}>
+                                Contact Me
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -87,6 +97,11 @@ const HomePage = () => {
                     <div className="centerpiece">
                         <img src={selectedImage} alt="Selected" />
                     </div>
+                </div>
+            )}
+            {openContact && (
+                <div className='contact-modal'>
+                    <ContactForm closeModal={closeModal}/>
                 </div>
             )}
         </>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=./index.html">
+  <script>
+    // GitHub Pages routing fix
+    if (location.pathname.startsWith('/dads-website/')) {
+      location.replace(
+        '/dads-website/' + location.hash.substring(1)
+      );
+    }
+  </script>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
