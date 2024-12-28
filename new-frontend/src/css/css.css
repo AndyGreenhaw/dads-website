@@ -1,0 +1,200 @@
+body {
+    position: relative; /* Ensure the body is positioned relative for the pseudo-element */
+    margin: 0;
+    min-height: 200vh; /* Ensure the body is tall enough to scroll */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Allow the image to repeat vertically */
+    background-image: url('../media/blue-sea.jpg');
+    /* background-image: url('../media/purple-tree.jpg'); */
+    background-size: 100% auto;
+    background-position: top left;
+    background-repeat: repeat-y; /* Repeat the image vertically */
+    filter: blur(2px); /* Apply the blur effect */
+    z-index: -1; /* Ensure the pseudo-element is behind the body content */
+    min-height: 200vh; /* Ensure the pseudo-element is tall enough to cover the content */
+}
+
+.dark-center-background { 
+    /* background-color: rgba(0, 7, 42, 0.7); */
+    background: radial-gradient(rgb(0, 12, 123), black);
+    max-width: 80vw;    
+}
+
+/* Header Copy */
+.home-header {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.home-subheader {
+    color: white;
+    font-size: 25px;
+}
+
+/* Profile Section */
+.profile-row {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.profile-bio-text {
+    text-align: left;
+    color:white;
+    font-size: 18px;
+    padding-right: 100px;
+    padding-left: 50px;
+}
+
+.profile-image-text {
+    text-align: center;
+    width:auto;
+    height: 100%; /* Maintains the aspect ratio */
+    max-width: 400px; /* Adjust this value as needed */
+    object-fit: contain; /* Ensures the image fits within the space without cropping */
+    cursor: pointer;
+    
+}
+
+/* Contact Area */
+.contact-row{
+    text-align: center;
+}
+
+.contact-button {
+    background-color: aliceblue;
+    width: 250px;
+    height: 100px;
+    font-size: 36px;
+    border: solid 2px;
+    margin-bottom: 50px;
+    box-shadow: 2px,2px,2px,2px;
+}
+
+.call-to-action {
+    color: white;
+}
+
+/* Gallery Display */
+.image-row {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.gallery-image {
+    text-align: right;
+    width: 100%;
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 300px; /* Adjust this value as needed */
+    object-fit: contain; /* Ensures the image fits within the space without cropping */
+    cursor: pointer;
+}
+
+/* Styles for screens smaller than 768px (md) */
+@media (max-width: 768px) {
+    .profile-image-text {
+        text-align: center;
+        width:auto;
+        height: 100%; /* Maintains the aspect ratio */
+        max-width: 400px; /* Adjust this value as needed */
+        object-fit: contain; /* Ensures the image fits within the space without cropping */
+        cursor: pointer;
+        margin-bottom: 100px;
+    }
+    .profile-bio-text {
+        text-align: center;
+        color:white;
+        font-size: 18px;
+        padding-left: 100px;
+    }
+    .gallery-image {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 500px; /* Override max-width to fit smaller screens */
+        padding-bottom: 50px;
+    }
+    .image-row {
+        text-align: center;
+        margin-top:0;
+        margin-bottom:0;
+    }
+}
+
+/* Styles for very small screens (phones) */
+@media (max-width: 576px) {
+    .profile-image-text {
+        text-align: center;
+        width:auto;
+        height: 100%; /* Maintains the aspect ratio */
+        max-width: 400px; /* Adjust this value as needed */
+        object-fit: contain; /* Ensures the image fits within the space without cropping */
+        cursor: pointer;
+        margin-bottom: 100px;
+    }
+    .profile-bio-text {
+        text-align: center;
+        color:white;
+        font-size: 18px;
+        padding-left: 100px;
+    }
+    .gallery-image {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 500px; /* Override max-width to fit smaller screens */
+        padding-bottom: 50px;
+    }
+    .image-row {
+        text-align: center;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Selected Centerpiece */
+
+.centerpiece {
+    text-align: center;
+    width: 100%;  /* Adjust to your desired size */
+    height: auto;
+    max-height: 100vw;
+    /* max-height: 80vh; */
+    animation: fadeInZoom 0.5s forwards;
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
