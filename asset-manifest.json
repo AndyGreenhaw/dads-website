@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/greenhawglass/static/css/main.b1d11796.css",
-    "main.js": "/greenhawglass/static/js/main.f35accab.js",
+    "main.css": "/greenhawglass/static/css/main.56c248fd.css",
+    "main.js": "/greenhawglass/static/js/main.a5eedd0d.js",
     "static/js/488.af104311.chunk.js": "/greenhawglass/static/js/488.af104311.chunk.js",
     "static/media/a1.jpg": "/greenhawglass/static/media/a1.044659617f6bb99a52e2.jpg",
     "static/media/f3.jpg": "/greenhawglass/static/media/f3.d7fc7dbcf1fd97976df6.jpg",
@@ -37,12 +37,12 @@
     "static/media/h1.jpg": "/greenhawglass/static/media/h1.9ad5c5477ab058356869.jpg",
     "static/media/b3.jpg": "/greenhawglass/static/media/b3.5d171bd1754d0be9d85b.jpg",
     "index.html": "/greenhawglass/index.html",
-    "main.b1d11796.css.map": "/greenhawglass/static/css/main.b1d11796.css.map",
-    "main.f35accab.js.map": "/greenhawglass/static/js/main.f35accab.js.map",
+    "main.56c248fd.css.map": "/greenhawglass/static/css/main.56c248fd.css.map",
+    "main.a5eedd0d.js.map": "/greenhawglass/static/js/main.a5eedd0d.js.map",
     "488.af104311.chunk.js.map": "/greenhawglass/static/js/488.af104311.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1d11796.css",
-    "static/js/main.f35accab.js"
+    "static/css/main.56c248fd.css",
+    "static/js/main.a5eedd0d.js"
   ]
 }
