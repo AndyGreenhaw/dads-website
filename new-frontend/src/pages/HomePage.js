@@ -45,7 +45,7 @@ const HomePage = () => {
     const handleContact = () => {
         setOpenContact(!openContact)
     }
-    
+
     return (
         <>
             <div className="container-fluid dark-center-background">
@@ -59,7 +59,7 @@ const HomePage = () => {
                 </div>
                 <div className="row profile-row">
                     <div className="col-xl-4">
-                        <img className="profile-image-text" src={profileImage}></img>
+                        <img className="profile-image" src={profileImage}></img>
                     </div>
                     <div className='col-xl-8'>
                         <p className='profile-bio-text'>
@@ -94,8 +94,8 @@ const HomePage = () => {
             </div>
             {selectedImage && (
                 <div className="modal-overlay" onClick={closeModal}>
-                    <div className="centerpiece">
-                        <img src={selectedImage} alt="Selected" />
+                    <div className=".centerpiece-container">
+                        <img className="centerpiece" src={selectedImage} alt="Selected" />
                     </div>
                 </div>
             )}

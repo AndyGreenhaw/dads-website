@@ -51,11 +51,11 @@ body::before {
     text-align: left;
     color:white;
     font-size: 18px;
-    padding-right: 100px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
-.profile-image-text {
+.profile-image {
     text-align: center;
     width:auto;
     height: 100%; /* Maintains the aspect ratio */
@@ -68,14 +68,15 @@ body::before {
 /* Contact Area */
 .contact-row {
     text-align: center;
-    margin-bottom: 70px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .contact-button {
     background: linear-gradient(to right, #00213d, #1500d1); /* Blue gradient */
     color: white;
     font-size: 28px; /* Bigger text */
-    padding: 10px 20px;
+    padding: 20px;
     border: none;
     border-radius: 5px; /* Evenly rounded edges */
     cursor: pointer;
@@ -185,6 +186,37 @@ body::before {
     cursor: pointer;
 }
 
+/* Selected Centerpiece */
+
+/* Container for Centerpiece */
+.centerpiece-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Optional: Adjust based on your design */
+}
+
+.centerpiece {
+    width: 100%; /* Ensure image takes full width of container */
+    height: auto;
+    max-width: 80vw; /* Adjust to your desired size */
+    animation: fadeInZoom 0.5s forwards;
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
 /* Styles for screens smaller than 768px (md) */
 @media (max-width: 1300px) {
     .profile-row {
@@ -192,20 +224,21 @@ body::before {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .profile-image-text {
+    .profile-image {
         text-align: center;
         width:auto;
         height: 100%; /* Maintains the aspect ratio */
         max-width: 400px; /* Adjust this value as needed */
         object-fit: contain; /* Ensures the image fits within the space without cropping */
         cursor: pointer;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .profile-bio-text {
         text-align: center;
         color:white;
         font-size: 18px;
-        padding-left: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .gallery-image {
         width: 100%; /* Full width */
@@ -218,19 +251,20 @@ body::before {
         margin-top:0;
         margin-bottom:0;
     }
+
 }
 
 /* Styles for very small screens (phones) */
 @media (max-width: 912px) {
     
-    .profile-image-text {
+    .profile-image {
         text-align: center;
         width:auto;
         height: 100%; /* Maintains the aspect ratio */
         max-width: 400px; /* Adjust this value as needed */
         object-fit: contain; /* Ensures the image fits within the space without cropping */
         cursor: pointer;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .profile-bio-text {
         text-align: center;
@@ -254,40 +288,69 @@ body::before {
 }
 
 @media (max-width: 600px) {
+    .profile-row {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     .home-header {
         color: white;
         font-size: 50px;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
-    .profile-image-text {
+    .profile-image {
         text-align: center;
         width:auto;
         height: 100%; /* Maintains the aspect ratio */
         max-width: 300px; /* Adjust this value as needed */
         object-fit: contain; /* Ensures the image fits within the space without cropping */
         cursor: pointer;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
     }
+    .profile-bio-text {
+        text-align: center;
+        color:white;
+        font-size: 16px;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
 }
 
-@media (max-width: 350px) {
-    .profile-image-text {
+@media (max-width: 400px) {
+    .profile-row {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .home-header {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+
+    .profile-image {
         text-align: center;
         width:auto;
         height: 100%; /* Maintains the aspect ratio */
         max-width: 200px; /* Adjust this value as needed */
         object-fit: contain; /* Ensures the image fits within the space without cropping */
         cursor: pointer;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
     }
+
 }
 
 
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -312,26 +375,4 @@ body::before {
     opacity: 1;
     z-index: 1000;
     cursor: pointer;
-}
-
-/* Selected Centerpiece */
-
-.centerpiece {
-    text-align: center;
-    width: 100%;  /* Adjust to your desired size */
-    height: auto;
-    max-height: 100vw;
-    /* max-height: 80vh; */
-    animation: fadeInZoom 0.5s forwards;
-}
-
-@keyframes fadeInZoom {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
